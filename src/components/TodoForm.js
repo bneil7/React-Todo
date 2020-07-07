@@ -17,11 +17,12 @@ class TodoForm extends React.Component {
     event.preventDefault();
     this.props.addTodo(event, this.state.todoName);
     this.setState({
-      name: "",
+      todoName: "",
     });
   };
 
   render() {
+    console.log("rendering form...");
     return (
       <form onSubmit={this.submitTodo}>
         <input
